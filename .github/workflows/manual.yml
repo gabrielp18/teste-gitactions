@@ -2,8 +2,11 @@ name: Teste
 
 on:
   schedule:
-    - cron: '* * * * *' # At 00:00 on Monday
+    - cron: "*/2 * * * *" # At 00:00 on Monday
   workflow_dispatch:
+
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
   
 jobs:
   build:
